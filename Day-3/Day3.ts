@@ -6,7 +6,7 @@ const timeConversion=(timeString:string):string=>{
             return '00:00:00'
         }else if(hour===12){
             hour=hour-12
-            let newTime:string=hour.toString()+timeString.slice(2,timeString.length-2)
+            let newTime:string=hour.toString()+'0'+timeString.slice(2,timeString.length-2)
             return newTime
         }
     }else if(timeOfDay==='PM' && timeString==='12:00:00PM'){
@@ -23,11 +23,12 @@ const timeConversion=(timeString:string):string=>{
         }
         
     }
-    return timeString
+    return timeString.slice(0,timeString.length-2)
 }
 
-timeConversion('07:05:45PM')
-timeConversion('12:01:00PM')
-timeConversion('12:01:00AM')
-timeConversion('12:00:00AM')
-timeConversion('12:00:00PM')
+console.log(timeConversion('07:05:45PM'))
+console.log(timeConversion('12:01:00PM'))
+console.log(timeConversion('12:40:22AM'))
+console.log(timeConversion('12:00:00AM'))
+console.log(timeConversion('12:00:00PM'))
+console.log(timeConversion('06:40:03AM'))
