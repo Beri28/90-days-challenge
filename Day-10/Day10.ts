@@ -9,23 +9,10 @@ const twoArrays=(a:number[],b:number[],k:number):string=>{
             })
         }
         else{
-                return "No"
+                return "NO"
         } 
     }
-    // b.forEach((num,index)=>{
-    //     console.log(tempArray)
-    //     let temp:number=k-num
-    //     if(tempArray.includes(temp)){
-    //     let location:number=tempArray.indexOf(temp)
-    //     tempArray=tempArray.filter((item,index)=>{
-    //         if(index!==location) return item
-    //     })
-    //     }
-    //     else{
-    //          return "No"
-    //     }
-    // })
-    return "Yes"
+    return "YES"
 }
 console.log(twoArrays([2, 1, 3],[7, 8, 9],10))
 console.log(twoArrays([1, 2, 2, 1],[3, 3, 3, 4],5))
