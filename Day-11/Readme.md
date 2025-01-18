@@ -9,3 +9,6 @@ Debug the given function strings_xor to find the XOR of the two given strings ap
 Note: You can modify at most three lines in the given code and you cannot add or remove lines to the code.
 
 To restore the original code, click on the icon to the right of the language selector.
+
+Question was gotten from hackeRank website. Link to questions below.
+https://www.hackerrank.com/interview/preparation-kits/one-month-preparation-kit/one-month-week-one/challenges
