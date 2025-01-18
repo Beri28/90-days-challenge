@@ -29,7 +29,10 @@ const sorting=(arr:number[])=>{
 
 const flippingMatrix=(arr:number[][]):number=>{
     for(let i=0;i<arr.length;i++){ 
-        for(let j=i+1;j<arr[i].length;j++){
+        sorting(arr[i])
+    }
+    for(let i=0;i<arr.length;i++){ 
+        for(let j=0;j<arr[i].length;j++){
             if(arr[i][i]>arr[i][j]){
                 let temp=arr[i]
                 arr[i]=arr[j]
@@ -37,12 +40,25 @@ const flippingMatrix=(arr:number[][]):number=>{
             }
         }
     }
+    // for(let i=0;i<arr.length;i++){ 
+    //     for(let j=0;j<il;j++){
+    //         if(i<arr.length-1 && arr[i][j]<arr[i+1][j]){
+    //             let temp=arr[i][j]
+    //             arr[i][j]=arr[i+1][j]
+    //             arr[i+1][j]=temp
+    //             // sorting(arr[i+1])
+    //         }
+    //     }
+    // }
+    console.log(arr)
     let max_sum=arr[0].length/2
     let sum:number=0
     for(let i=0;i<max_sum;i++){ 
-        sum+=arr[i][i]
+        for(let j=0;j<max_sum;j++){
+            sum+=arr[i][j]
+        }
     }
-    console.log(sum)
+    // console.log(sum)
     return sum
 }
-flippingMatrix([[2,1],[4,3]])
+flippingMatrix([[3,5],[7,16]])
