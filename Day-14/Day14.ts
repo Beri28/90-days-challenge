@@ -1,5 +1,4 @@
 const caesarCipher=(textString:string,rotator:number):string=>{
-    // textString=textString.toLowerCase()
     let newString:string[]=textString.split('')//.join("")
     const alphabet:string='abcdefghijklmnopqrstuvwxyz'
     const alphabet2:string=alphabet.toUpperCase()
