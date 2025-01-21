@@ -10,8 +10,21 @@ const maxMin =(arr:number[],k:number):number=>{
     }
     // console.log(arr)
     let newArray:number[]=arr.slice(0,k)
-    console.log(newArray)
-    return newArray[newArray.length-1]-newArray[0]
+    // console.log(newArray)
+    let maxNumber:number=Math.max(...arr)
+    // let maxNumber2:number=Math.max(...arr.filter((number)=>{
+    //     if(number!==maxNumber) return number
+    // }))
+    let maxNumber2:number=arr[arr.length-k]
+    let sug1=maxNumber-maxNumber2
+    // console.log("max2=",maxNumber2)
+    // console.log("High-low=",sug1)
+    // console.log("Other",newArray[newArray.length-1]-newArray[0])
+    if(newArray[newArray.length-1]-newArray[0]<sug1){
+        return newArray[newArray.length-1]-newArray[0]
+    }else{
+        return sug1
+    }
 }
 console.log(maxMin([1,4,7,2],2))
 console.log(maxMin([100,
