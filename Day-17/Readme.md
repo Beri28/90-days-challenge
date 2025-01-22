@@ -5,3 +5,5 @@ Question was gotten from hackeRank website. Link to questions below.
 https://www.hackerrank.com/interview/preparation-kits/one-month-preparation-kit/one-month-week-two/challenges
 
 <h5>NB: Initial code i wrote which is now commented failed 2 test cases due to time out errors, so the code took too long for test cases with large amount of input, final code i have was gotten from the discussions tab, specifically from @terrymayone</h5>
+
+Found out about the reducer method in javascript and it's importance when summing array elements.
