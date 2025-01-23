@@ -1,11 +1,9 @@
 const superDigit=(number:string,k:number):number=>{
-    for(let i=0;i<k;i++){
-        number+=number
-    }
-    return number.split('').reduce((acc,digit)=>acc+parseInt(digit),0)
-    // if(number.length==1) return parseInt(number)
-    // return superDigit(number.slice(0,Math.floor(number.length/2))) + superDigit(number.slice(Math.floor(number.length/2)))
+    if(number.length==1) return parseInt(number)
+    let temp:string=k===0?number:(number.split('').reduce((acc,digit)=>acc+parseInt(digit),0)*k).toString()
+    let superdigit=superDigit(temp.slice(0,Math.floor(temp.length/2)),0) + superDigit(temp.slice(Math.floor(temp.length/2)),0)
+    return superdigit.toString().length===1?superdigit:superDigit(superdigit.toString(),0)
 }
-console.log(superDigit('1',0))
-console.log(superDigit('116',0))
-console.log(superDigit('9875987598759875',0))
+console.log(superDigit('123',3))
+console.log(superDigit('116',4))
+console.log(superDigit('9875',4))
