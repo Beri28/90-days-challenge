@@ -12,13 +12,21 @@ const gridChallenge =(grid:string[]):string=>{
             }
         }
         grid[i]=gridLetters.join("")
-        if(i<grid.length-1 && alphabet.indexOf(grid[i][i])>alphabet.indexOf(grid[i+1][i])){
-            console.log("NO")
-            return "NO"
+    }
+    for(let i=0;i<grid.length;i++){
+        for(let j=0;j<grid.length-1;j++){
+            if(alphabet.indexOf(grid[j][i])>alphabet.indexOf(grid[j+1][i])){
+                console.log("NO")
+                return "NO"
+            }
         }
     }
     console.log("YES")
     return "YES"
 }
-gridChallenge(['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv'])
-gridChallenge(['abc', 'ade', 'efg'])
+
+gridChallenge(['kc',
+    'iu'])
+gridChallenge(['uxf',
+    'vof',
+    'hmp'])
