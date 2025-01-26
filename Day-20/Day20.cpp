@@ -44,7 +44,7 @@ int findLuckyDates(int d1, int m1, int y1, int d2, int m2, int y2) {
         if(d1 == d2 && m1 == m2 && y1 == y2) {
             break;
         }
-        
+
         updateLeapYear(y1);
         d1 = d1 + 1;
         if(d1 > month[m1]) {
@@ -68,6 +68,7 @@ int main() {
             str[i] = ' ';
         }
     }
+    cout<<str;
     stringstream ss;
     ss << str;
     ss >> d1 >> m1 >> y1 >> d2 >> m2 >> y2;
