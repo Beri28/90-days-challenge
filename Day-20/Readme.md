@@ -14,3 +14,5 @@ Note: You can modify at most five lines in the given code and you cannot add or 
 
 Question was gotten from hackeRank website. Link to full questions below.
 https://www.hackerrank.com/interview/preparation-kits/one-month-preparation-kit/one-month-week-two/challenges
+
+Got some help from https://programmingoneonone.com/hackerrank-prime-dates-problem-solution.html (i made an error on line 10, corrected my code with the help of the article on that site)

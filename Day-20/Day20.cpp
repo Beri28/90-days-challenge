@@ -7,7 +7,7 @@ void updateLeapYear(int year) {
     if(year % 400 == 0) {
         month[2] = 29;
     } else if(year % 100 == 0) {
-        month[2] = 29;
+        month[2] = 28;
     } else if(year % 4 == 0) {
         month[2] = 29;
     } else {
@@ -34,6 +34,7 @@ int findLuckyDates(int d1, int m1, int y1, int d2, int m2, int y2) {
     storeMonth();
 
     int result = 0;
+
     while(true) {
         int x = d1;
         x = x * 100 + m1;
@@ -44,7 +45,6 @@ int findLuckyDates(int d1, int m1, int y1, int d2, int m2, int y2) {
         if(d1 == d2 && m1 == m2 && y1 == y2) {
             break;
         }
-
         updateLeapYear(y1);
         d1 = d1 + 1;
         if(d1 > month[m1]) {
@@ -52,7 +52,7 @@ int findLuckyDates(int d1, int m1, int y1, int d2, int m2, int y2) {
             d1 = 1;
             if(m1 > 12) {
                 y1 =  y1 + 1;
-                m1 = 1;
+                m1 =1;
             }
         }
     }
@@ -68,11 +68,10 @@ int main() {
             str[i] = ' ';
         }
     }
-    cout<<str;
     stringstream ss;
     ss << str;
     ss >> d1 >> m1 >> y1 >> d2 >> m2 >> y2;
 
-    int result = findLuckyDates(d1, m1, y1, d2, m2, y2);
+    int result = findLuckyDates(25, 06, 2365, 07, 9, 8847);//(01, 01, 7580, 26, 07, 9834); //260747 294574
     cout << result << endl;
 }
