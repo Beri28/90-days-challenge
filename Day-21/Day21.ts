@@ -1,28 +1,21 @@
-const counterGame=(num:number,check=true)=>{
-    console.log('2:',check)
-    let Louise:boolean=check
-    if(num===1){
-        if(Louise){ 
-            console.log("Louise")
-            return "Louise"
+const counterGame=(num:number):string=>{
+    let Louise:boolean=false
+    while(num>1){
+        let x=Math.log10(num)/Math.log10(2)
+        if(x===Math.floor(x)){
+            num/=2
+        }else{
+            num=num-Math.pow(2,Math.floor(x))
         }
-        else{
-            console.log("Richard")
-            return "Richard"
-        }
+        Louise=!Louise
     }
-    let x=Math.log10(num)/Math.log10(2)
-    console.log(x)
-    if(x===Math.floor(x)){
-        // console.log("It's a power of 2")
-        num/=2
-        // console.log(num)
-        counterGame(num,!Louise)
-    }else{
-        num=num-Math.pow(2,Math.floor(x))
-        // console.log(num)
-        counterGame(num,!Louise)
+    if(Louise){ 
+        return "Louise"
+    }
+    else{
+        return "Richard"
     }
 }
 console.log(counterGame(132))
+console.log(counterGame(6))
 // counterGame(128)
