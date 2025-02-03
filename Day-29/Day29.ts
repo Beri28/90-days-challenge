@@ -29,8 +29,8 @@ function countApplesAndOranges(s: number, t: number, a: number, b: number, apple
 
 function getTotalX (a: number[], b: number[]):number{
     let between:number=0
-    for(let i=0;i<a.length;i++){
-        if(a.every((val)=>a[i]%val==0) && b.every((val)=>val%i==0)){
+    for(let i=a[a.length-1];i<=b[0];i++){
+        if(a.every((val)=>i%val==0) && b.every((val)=>val%i==0)){
             between++
         }
     }
