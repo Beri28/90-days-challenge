@@ -36,3 +36,17 @@ function getTotalX (a: number[], b: number[]):number{
     }
     return between
 }
+
+function birthday(s: number[], d: number, m: number): number {
+    // Write your code here
+    let ways:number=0
+    for(let i=0;i<=s.length-m;i++){
+        let sum=s.slice(i,i+m).reduce((acc,curr)=>acc+curr,0)
+        if(sum===d){
+            ways++
+        }
+    }
+    console.log(ways)
+    return ways
+}
+birthday([1,2,1,3,2],3,2)
