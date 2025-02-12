@@ -3,3 +3,7 @@ A Discrete Mathematics professor has a class of students. Frustrated with their 
 Given the arrival time of each student and a threshhold number of attendees, determine if the class is cancelled.
 
 Link to question https://www.hackerrank.com/challenges/angry-professor/problem?isFullScreen=true
+
+permutationEquation()
+
+Link to question https://www.hackerrank.com/challenges/permutation-equation/problem?isFullScreen=true
