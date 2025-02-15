@@ -16,4 +16,41 @@ function beautifulDays (i: number, j: number, k: number):number{
     console.log(bDays)
     return bDays
 }
-beautifulDays(20 ,23 ,6)
+// beautifulDays(20 ,23 ,6)
+
+function jumpingOnClouds (c:number[],k:number){
+    let e=99
+    let i=0
+    // let position=(i+k)%c.length
+    for(let position=(i+k)%c.length; i++;){
+        console.log(position)
+        if(c[position]===1){
+             e=e-2
+        }else{
+            e=e-1
+        }
+        if(position===0){
+            console.log("Return")
+            return
+        }
+        // i++
+        // position=(i+k)%c.length
+    }
+    // while(position>=0){
+    //     console.log(position)
+    //     if(c[position]===1){
+    //          e=e-2
+    //     }else{
+    //         e=e-1
+    //     }
+    //     if(position===0){
+    //         console.log("Return")
+    //         return
+    //     }
+    //     i++
+    //     position=(i+k)%c.length
+    // }
+    console.log(e)
+}
+jumpingOnClouds([0,0,1,0],2)
+jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2)
