@@ -5,27 +5,23 @@ function repeatedString (s: string, n: number):number{
     if(s.length>n){
         s=s.slice(0,n)
     }
-    // for(let i=0;i<n;i++){
-    //     s[i%s.length]==='a' && a++
-    // }
     for(let i=0;i<s.length;i++){
         s[i%s.length]==='a' && a++
     }
     let tempT=n%s.length
     let tempT2=Math.floor(n/s.length)
-    console.log(tempT,tempT2)
-    console.log((a*tempT2)+1)
-    if(tempT===0 || tempT===2){
-        console.log((a*tempT2))
-        return a*tempT2
+    a=a*tempT2
+    if(tempT>0){
+        for(let i=0;i<tempT;i++){
+            if(s[i]==='a'){
+                a++
+            }
+        }
     }
-    console.log((a*tempT2)+1)
-    return (a*tempT2)+1
-    // console.log(tempT,tempT2)
-    // console.log((a*tempT2)+1)
-    // console.log(a)
-    // return a
+    console.log(a)
+    return a
 }
-// repeatedString('abcac',10)
-// repeatedString('aba',10)
-repeatedString('gfcaaaecbg',547602)
+repeatedString('abcac',10)
+repeatedString('aba',10)
+// repeatedString('gfcaaaecbg',547602)
+repeatedString('bab',725261545450)
