@@ -7,3 +7,5 @@ Link to question on Leetcode https://leetcode.com/problems/memoize/?envType=stud
 sleep()
 Given a positive integer millis, write an asynchronous function that sleeps for millis milliseconds. It can resolve any value.
 Link to question https://leetcode.com/problems/sleep/?envType=study-plan-v2&envId=30-days-of-javascript
+
+camelcase()
