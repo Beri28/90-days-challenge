@@ -11,3 +11,10 @@ function memoize(fn: Fn,memo={}): Fn {
         return x
     }
 }
+
+async function sleep(millis: number): Promise<void> {
+    return await new Promise<void>((resolve, reject) => {
+        setTimeout(resolve,millis)
+    })
+}
+sleep(1000)
