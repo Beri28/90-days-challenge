@@ -16,5 +16,16 @@ function icecreamParlor(m: number, arr: number[]): number[] {
     return []
     
 }
-console.log(icecreamParlor(100,[5 ,75 ,25]))
-console.log(icecreamParlor(200,[150 ,24 ,79 ,50 ,88 ,345 ,3]))
+// console.log(icecreamParlor(100,[5 ,75 ,25]))
+// console.log(icecreamParlor(200,[150 ,24 ,79 ,50 ,88 ,345 ,3]))
+
+type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+type Fn = (...args: JSONValue[]) => void
+
+function cancellable(fn: Fn, args: JSONValue[], t: number): Function {
+    let id=setTimeout(()=>fn(...args),t)
+    return function cancelFn(){
+        clearTimeout(id)
+        return
+    }
+};
