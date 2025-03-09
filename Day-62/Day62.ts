@@ -18,13 +18,13 @@ function minimumNumber(n: number, password: string): number {
     if(!pArray.some((el)=>special_characters.includes(el))){
         count++
     }
-    console.log(count)
+    if(n+count>=6) return count
     if(n<6){
-        count=count+(6-n)
+        return 6-n
     }
-    console.log(count)
     return count
 }
-console.log(minimumNumber(5,'2bbbb'))
-console.log(minimumNumber(5,'2bb#A'))
-console.log(minimumNumber(11,'#HackerRank'))
+// console.log(minimumNumber(5,'2bbbb'))
+// console.log(minimumNumber(5,'2bb#A'))
+// console.log(minimumNumber(11,'#HackerRank'))
+console.log(minimumNumber(3,'Ab1'))
