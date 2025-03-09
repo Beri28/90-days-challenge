@@ -7,3 +7,4 @@ Notes
 -The difference between the maximum and minimum numbers in the original list is less than or equal to 100.
 
 Link to question https://www.hackerrank.com/challenges/missing-numbers/problem?isFullScreen=true
+Got help from https://www.hackerrank.com/challenges/missing-numbers/forum/comments/1456604
