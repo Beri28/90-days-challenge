@@ -10,7 +10,7 @@ function anagram(s: string): number {
     if(left.split('').every((l)=>right.includes(l))) return 0
     for(let i=0;i<right.length;i++){
         if(!rArray.includes(left[i])) changes++
-        rArray[i]=undefined
+        else rArray[i]=undefined
     }
     // console.log("Left:",left)
     // console.log("Right:",right)
@@ -22,5 +22,5 @@ function anagram(s: string): number {
 // console.log(anagram('abc'))
 // console.log(anagram('mnop'))
 // console.log(anagram('xyyx'))
-// console.log(anagram('xaxbbbxx'))
+console.log(anagram('xaxbbbxx'))
 console.log(anagram('fdhlvosfpafhalll'))
