@@ -2,7 +2,7 @@ function minimumBribes(q: number[]): void {
     // Write your code here
     let bribes:number=0
     for(let i=0;i<q.length;i++){
-        if(Math.abs((i+1)-q[i])>2) {
+        if(Math.abs((i+1)-q[i])>2 && Math.abs((i+1))<q[i]) {
             console.log("Too chaotic")
             return
         }
