@@ -36,6 +36,6 @@ const minMaxSum=(arr:number[])=>{
     for(let i=0;i<arr.length-1;i++){
         minSum+=arr[i]
     }
-    console.log(minSum," ",maxSum)
+    console.log(minSum,maxSum)
 }
 minMaxSum([7,3,5,9,1])
