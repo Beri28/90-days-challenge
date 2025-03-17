@@ -16,4 +16,26 @@ function caesarCipher(s: string, k: number): string {
     console.log(newSentence)
     return newSentence
 }
-caesarCipher('middle-Outz',2)
+// caesarCipher('middle-Outz',2)
+
+function plusMinus(arr: number[]): void {
+    // Write your code here
+    let negCount=0
+    let posCount=0
+    let zeroCount=0
+    arr.forEach((num)=>{
+        if(num===0){
+            zeroCount++
+        }
+        else if(num>0){
+            posCount++
+        }
+        else if(num<0){
+            negCount++
+        }
+    })
+    console.log((posCount/arr.length).toFixed(6))
+    console.log((negCount/arr.length).toFixed(6))
+    console.log((zeroCount/arr.length).toFixed(6))
+}
+plusMinus([-4, 3, -9, 0, 4, 1])
