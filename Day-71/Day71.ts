@@ -26,6 +26,7 @@ const flippingMatrix=(arr:number[][]):number=>{
             }
         }
     }
+    console.log(arr)
     for(let i=0;i<arr.length;i++){ 
         if(arr[i][0]<arr[i][arr.length-1]){
             for(let j=0;j<(arr[i].length)/2;j++){
@@ -35,7 +36,7 @@ const flippingMatrix=(arr:number[][]):number=>{
             }
         }
     }
-    // console.log(arr)
+    console.log(arr)
     let max_sum=arr[0].length/2
     let sum:number=0
     for(let i=0;i<max_sum;i++){ 
@@ -46,11 +47,27 @@ const flippingMatrix=(arr:number[][]):number=>{
     console.log(sum)
     return sum
 }
+// flippingMatrix([
+//     [112, 42, 83, 119], 
+//     [56, 125, 56, 49], 
+//     [15, 78, 101, 43], 
+//     [62, 98, 114, 108]])
+// flippingMatrix([
+//     [112, 42, 83, 119], 
+//     [56, 125, 56, 49], 
+//     [15, 78, 101, 43], 
+//     [62, 98, 114, 108]])
 flippingMatrix([
-    [112, 42, 83, 119], 
-    [56, 125, 56, 49], 
-    [15, 78, 101, 43], 
-    [62, 98, 114, 108]])
-flippingMatrix([
-    [1,2], 
-    [3,4],])
+    [107, 54, 128, 15], 
+    [12, 75, 110, 138], 
+    [100, 96, 34, 85], 
+    [75, 15, 28, 112]])
+// flippingMatrix([
+//     [1,2], 
+//     [3,4],])
+
+//     107 54 128 15
+// 12 75 110 138
+// 100 96 34 85
+// 75 15 28 112
+// expected answer=488
