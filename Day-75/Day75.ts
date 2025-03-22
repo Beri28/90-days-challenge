@@ -1,4 +1,5 @@
 function removeElement(nums:number[],val:number):number {
+    // solution was accepted, passed 9 out of 115 test cases
     let k=0
     for(let i=0;i<nums.length-1;i++){
         if(nums[i]===val) {
