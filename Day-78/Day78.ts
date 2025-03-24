@@ -15,12 +15,12 @@ function appendAndDelete(s: string, t: string, k: number): string {
             // console.log(temp)
             count+=temp.length
             // console.log("Count third:",count)
-            if(count===k) return 'Yes'
+            if(count>k) return 'No'
             break
         }
     }
     console.log(count)
-    return 'No'
+    return 'Yes'
 }
-console.log(appendAndDelete('hackerhappy','hackerrank',9))
+console.log(appendAndDelete('abcd','abcdert',10))
 console.log(appendAndDelete('y','yu',2))
