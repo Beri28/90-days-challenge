@@ -12,7 +12,6 @@ class TimeLimitedCache {
         if(this.keys.includes(key) && !this.expiredKeys.includes(key)){
             let temp=this.keyValues.findIndex((value)=>value.key===key)
             this.keyValues[temp]={key,value,duration}
-            this.keyCount++
             clearTimeout(this.timeOuts.find((val)=>val.key===key)?.tO)
             let tO=setTimeout(() => {
                 this.expiredKeys.push(key)
