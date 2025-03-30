@@ -2,21 +2,19 @@ type Fn<T> = () => Promise<T>
 
 function promiseAll<T>(functions: Fn<T>[]): Promise<T[]> {
     let res:any[]=[]
+    let counter:number=0
     return new Promise((resolve,reject)=>{
         for(let i=0;i<functions.length;i++){
-            // res.push(functions[i]())
             functions[i]().then((resl)=>{
                 console.log("Resolve for each",resl)
-                res.push(resl)
-                console.log(res)
-                // if(i===functions.length-1) resolve(res)
+                // res.push(resl)
+                res[i]=resl
+                counter++
+                if(counter===functions.length) resolve(res)
             }).catch((rej)=>{
                 reject(rej)
             }) 
         }
-        // console.log("//////////")
-        // console.log(res)
-        // resolve(res)
     })
 };
 
@@ -25,4 +23,4 @@ const promise = promiseAll([
     () => new Promise(resolve => setTimeout(() => resolve(10), 150)), 
     () => new Promise(resolve => setTimeout(() => resolve(16), 100))
 ])
-promise.then(console.log); // [42]
+promise.then(console.log); // [4,10,16]
